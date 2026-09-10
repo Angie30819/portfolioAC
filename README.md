@@ -1,71 +1,60 @@
-# Portafolio — Angelica Navarrete
+# Angelica Navarrete — Portfolio Site
 
-Sitio de una sola página construido en HTML, CSS y JavaScript puro (sin frameworks ni proceso de build), listo para publicarse en GitHub Pages de forma gratuita.
+A single-page site built with plain HTML, CSS, and JavaScript — no frameworks, no build tools required. Ready to host for free on GitHub Pages.
 
-## Archivos
+## What's in this folder
 
-- `index.html` — estructura y contenido del sitio
-- `style.css` — estilos (paleta, tipografía, layout)
-- `script.js` — resalta la sección activa en el menú al hacer scroll
+| File | Purpose |
+|---|---|
+| `index.html` | Page content and structure |
+| `style.css` | Visual design — colors, type, layout |
+| `script.js` | Highlights the active section in the nav while scrolling |
 
-## Antes de publicar: personaliza tu contenido
+## Before you publish: things to swap out
 
-Busca estos marcadores de posición y reemplázalos con tu información real:
+- **Projects** — the three project cards are placeholders. Swap in your actual bootcamp deliverables, along with real links to their repos.
+- **Contact links** — update the LinkedIn and GitHub URLs with your own.
+- **Dates** — double-check the years in the Trayectoria/Experience section match your real timeline.
+- Want to add screenshots later? Drop them in a new `images/` folder and reference them from `index.html`.
 
-1. **Proyectos** (sección `Proyectos` en `index.html`): reemplaza los tres proyectos de ejemplo con tus entregables reales del bootcamp. Cada `<article class="project-card">` tiene un título, descripción, etiquetas de tecnología y un enlace `href="#"` que debes apuntar a tu repositorio real.
-2. **Enlaces de contacto** (sección `Contacto`): reemplaza las URLs de LinkedIn y GitHub con las tuyas.
-3. **Fechas exactas** en la sección `Trayectoria`: ajusta los años si no son exactamente los que puse.
-4. Si más adelante quieres agregar fotos de proyectos, puedes colocarlas en una carpeta `images/` y referenciarlas desde `index.html`.
+## Publishing to GitHub Pages
 
-## Cómo publicarlo en GitHub Pages (paso a paso)
+**Step 1 — Get a GitHub account**
+Sign up at [github.com](https://github.com) if you don't already have one — it's free.
 
-### 1. Crea una cuenta en GitHub (si no tienes una)
-Ve a [github.com](https://github.com) y regístrate. Es gratis.
+**Step 2 — Create the repository**
+Click the **"+"** in the top right → **New repository**. Name it `your-username.github.io`, using your actual GitHub username — this exact naming pattern is what tells GitHub to serve it as a live website. Set it to Public, skip adding a README (you already have one), and click **Create repository**.
 
-### 2. Crea un nuevo repositorio
-- Haz clic en el botón **"+"** arriba a la derecha → **"New repository"**.
-- Nómbralo así exactamente: `tu-usuario.github.io` (reemplaza "tu-usuario" por tu nombre de usuario de GitHub). Este nombre especial hace que GitHub lo publique automáticamente como sitio web.
-- Márcalo como **Público**.
-- No selecciones "Add a README" (ya tienes uno).
-- Haz clic en **"Create repository"**.
+**Step 3 — Upload your files**
 
-### 3. Sube los archivos
-Tienes dos formas de hacerlo, elige la que te resulte más cómoda:
+*No command line? Use the web uploader:*
+Open your new repo, click **Add file → Upload files**, drag in `index.html`, `style.css`, `script.js`, and `README.md`, then scroll down and click **Commit changes**.
 
-**Opción A — Interfaz web de GitHub (más fácil, sin instalar nada):**
-1. En tu nuevo repositorio, haz clic en **"uploading an existing file"** (o el botón "Add file" → "Upload files").
-2. Arrastra los archivos `index.html`, `style.css`, `script.js` y `README.md`.
-3. Baja hasta **"Commit changes"** y haz clic para confirmar.
-
-**Opción B — Línea de comandos (si tienes Git instalado):**
+*Comfortable with Git? Push from your terminal instead:*
 ```bash
-cd carpeta-donde-tengas-los-archivos
+cd path/to/your/files
 git init
 git add .
-git commit -m "Primer commit: portafolio"
+git commit -m "Initial commit: portfolio site"
 git branch -M main
-git remote add origin https://github.com/tu-usuario/tu-usuario.github.io.git
+git remote add origin https://github.com/your-username/your-username.github.io.git
 git push -u origin main
 ```
 
-### 4. Activa GitHub Pages
-1. En tu repositorio, ve a **Settings** (Configuración).
-2. En el menú izquierdo, haz clic en **Pages**.
-3. En "Source", selecciona la rama **main** y la carpeta **/ (root)**.
-4. Haz clic en **Save**.
+**Step 4 — Turn on Pages**
+Go to your repo's **Settings → Pages**. Under "Source," pick the **main** branch and **/ (root)** folder, then hit **Save**.
 
-### 5. Espera unos minutos y visita tu sitio
-GitHub tarda 1–3 minutos en publicar. Tu portafolio quedará disponible en:
-
+**Step 5 — Check your live site**
+GitHub takes a couple of minutes to publish. Once it's live, it'll sit at:
 ```
-https://tu-usuario.github.io
+https://your-username.github.io
 ```
 
-### 6. Agrega el enlace a tu CV
-Copia esa URL y agrégala en la sección de contacto de tu CV, junto a tu correo y LinkedIn.
+**Step 6 — Link it from your resume**
+Add that URL next to your email and LinkedIn on your CV.
 
-## Notas técnicas
+## A few technical notes
 
-- Las tipografías (Fraunces e IBM Plex Sans) se cargan desde Google Fonts vía `<link>` en el `<head>` — funcionarán automáticamente una vez publicado, ya que requieren conexión a internet real (no cargarán si abres el archivo sin conexión).
-- El sitio es responsive: se adapta a celular, tablet y escritorio.
-- No requiere backend, base de datos ni build step — es HTML/CSS/JS plano, así que cualquier cambio que hagas se refleja con solo guardar y volver a subir el archivo.
+- Fonts (Fraunces and IBM Plex Sans) load from Google Fonts via a `<link>` tag — they'll render correctly once the site is live and connected to the internet, but won't load if you open the HTML file locally without a connection.
+- The layout is fully responsive across phone, tablet, and desktop.
+- No backend, database, or build step involved — it's all static files, so any edit you make is live as soon as you commit and push.
