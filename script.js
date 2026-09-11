@@ -119,13 +119,14 @@ const translations = {
     footerNote: "Angelica Navarrete · Handcrafted, no templates."
   }
 };
- 
-let currentLang = "es";
- 
+
+// 👇 CAMBIO 1: idioma inicial ahora es inglés
+let currentLang = "en";
+
 function applyLanguage(lang) {
   currentLang = lang;
   document.documentElement.lang = lang;
- 
+
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     const text = translations[lang][key];
@@ -133,22 +134,27 @@ function applyLanguage(lang) {
       el.textContent = text;
     }
   });
- 
+
   document.title = translations[lang].pageTitle;
+
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute("content", translations[lang].metaDesc);
- 
+
   document.querySelectorAll(".lang-option").forEach((opt) => {
     opt.classList.toggle("is-active", opt.getAttribute("data-lang") === lang);
   });
 }
- 
+
 const langToggle = document.getElementById("langToggle");
 if (langToggle) {
   langToggle.addEventListener("click", () => {
     applyLanguage(currentLang === "es" ? "en" : "es");
   });
 }
+
+// 👇 CAMBIO 2: aplica el inglés apenas carga la página
+applyLanguage("en");
+
 // Resalta el enlace de navegación de la sección visible actualmente
 const sections = document.querySelectorAll('main section[id]');
 const navLinks = document.querySelectorAll('.topbar nav a');
