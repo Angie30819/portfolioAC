@@ -1,276 +1,230 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angelica Caballero | Científica de Datos & Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/logo.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Anti-flash: apply saved theme before first paint -->
-    <script>(function(){const t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})()</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Angelica Caballero | Environmental Compliance &amp; Data Analytics</title>
+  <meta name="description" content="Environmental professional with 5+ years in water treatment and regulatory project management in Mexico's energy sector, now building data analytics skills.">
+ 
+  <!-- TODO: cambia la URL por la de tu página (https://TU-USUARIO.github.io/) -->
+  <meta property="og:title" content="Your Name | Environmental Compliance & Data Analytics">
+  <meta property="og:description" content="Portfolio of an environmental professional moving into data analytics.">
+  <meta property="og:type" content="website">
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
+ 
+<!--
+  CÓMO EDITAR ESTE ARCHIVO
+  1. Busca los comentarios "TODO" y reemplaza los datos de ejemplo por los tuyos.
+  2. Cada texto tiene dos versiones: el contenido de la etiqueta es el inglés
+     y el atributo data-es contiene la versión en español.
+     Si editas uno, edita también el otro.
+-->
+ 
 <body>
-
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="images/logo.png" alt="AC Logo" class="nav-logo">
-            </a>
-
-            <button id="hamburger" class="hamburger" aria-label="Menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <div class="nav-links-text">
-                <a href="#projects" data-i18n="nav.projects">Proyectos</a>
-                <a href="#architecture" data-i18n="nav.architecture">Arquitectura</a>
-                <a href="#contact" data-i18n="nav.contact">Contacto</a>
-            </div>
-
-            <div class="nav-links-actions">
-                <span class="nav-divider"></span>
-                <a href="https://www.linkedin.com/in/angelica-caballero-417a07405/" target="_blank" class="nav-social" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/Angie30819" target="_blank" class="nav-social" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:angie308.caballero@gmail.com" class="nav-social" title="Email"><i class="fa-solid fa-envelope"></i></a>
-                <button class="theme-toggle nav-toggle-btn" aria-label="Toggle theme">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-                <button class="lang-toggle nav-toggle-btn" aria-label="Toggle language">EN</button>
-            </div>
-        </div>
+  <a class="skip-link" href="#main" data-es="Saltar al contenido">Skip to content</a>
+ 
+  <header class="site-header">
+    <a class="brand" href="#top">
+      <!-- TODO: tu nombre -->
+      <span data-es="Tu nombre">Your Name</span>
+    </a>
+ 
+    <nav class="site-nav" aria-label="Main">
+      <a href="#about" data-es="Sobre mí">About</a>
+      <a href="#skills" data-es="Habilidades">Skills</a>
+      <a href="#projects" data-es="Proyectos">Projects</a>
+      <a href="#contact" data-es="Contacto">Contact</a>
     </nav>
-
-    <section class="hero">
-        <div class="container">
-            <img src="images/logo.png" alt="Angelica Caballero Logo" class="hero-logo">
-            <div class="opportunity-badge">
-                <span class="pulse-dot"></span>
-                <span data-i18n="hero.badge">Abierto a oportunidades</span>
-            </div>
-            <h1>Angelica Caballero</h1>
-            <h2 data-i18n="hero.subtitle">Científica de Datos | Arquitectura Cloud & Optimización</h2>
-            <p class="hero-text" data-i18n="hero.text">Transformando datos complejos en soluciones escalables y valor de negocio tangible.</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.projects">Ver Proyectos</a>
-                <div class="cv-wrapper">
-                    <a href="utils/Data_Scientist_Angelica_Caballero.pdf" download class="btn btn-secondary" data-i18n="hero.cta.cv">Descargar CV</a>
-                    <span class="cv-hint" data-i18n="hero.cv.hint">PDF — Actualizado 2025</span>
-                </div>
-            </div>
+ 
+    <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Cambiar a español">ES</button>
+  </header>
+ 
+  <main id="main">
+ 
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-waves" id="hero-waves" aria-hidden="true"></div>
+ 
+      <div class="hero-inner">
+        <h1 data-es="Cumplimiento ambiental, traducido a datos.">Environmental compliance, translated into data.</h1>
+ 
+        <p class="lead" data-es="Profesional ambiental con más de 5 años de experiencia en tratamiento de agua y gestión regulatoria de proyectos en el sector energético de México. Actualmente desarrollo habilidades de análisis de datos para apoyar soluciones ambientales basadas en datos en América Latina y Estados Unidos.">
+          Environmental professional with 5+ years of experience in water treatment and regulatory project management in Mexico's energy sector. I'm now building data analytics skills to support data-driven environmental solutions across Latin America and the U.S.
+        </p>
+ 
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects" data-es="Ver proyectos">See projects</a>
+          <a class="btn btn-ghost" href="#contact" data-es="Contactar">Get in touch</a>
         </div>
+      </div>
     </section>
-
-    <section id="architecture" class="architecture">
-        <div class="container">
-            <h2 class="section-title reveal" data-i18n="arch.title">Diseño de Sistemas Complejos</h2>
-            <div style="text-align: center;">
-                <p style="color: var(--text-secondary); margin-bottom: 2rem;" data-i18n="arch.subtitle">
-                    Arquitecturas de datos y microservicios. Haz clic para ver el diagrama.
-                </p>
-                <button data-open-modal="archModal" class="btn btn-primary reveal">
-                    <i class="fa-solid fa-network-wired"></i>
-                    <span data-i18n="arch.btn">Ver Diagrama de Sistema</span>
-                </button>
-            </div>
+ 
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <h2 data-es="Sobre mí">About</h2>
+ 
+      <div class="section-body">
+        <div class="prose">
+          <p data-es="Llevo más de cinco años gestionando proyectos de tratamiento de agua y regulación en el sector energético de México, incluida la gestión de permisos ante autoridades regulatorias nacionales. Ese trabajo consiste en convertir requisitos técnicos en documentación y calendarios que una autoridad pueda revisar.">
+            I have spent more than five years managing water treatment and regulatory projects in Mexico's energy sector, including permit management with national regulatory authorities. That work means turning technical requirements into documentation and timelines a regulator can review.
+          </p>
+          <p data-es="Hoy estoy completando un bootcamp de análisis de datos para sumar habilidades técnicas en ciencia de datos. Busco un puesto híbrido entre sostenibilidad ambiental y tecnología, donde mi experiencia analítica y regulatoria apoye soluciones ambientales basadas en datos en América Latina y Estados Unidos.">
+            Today I'm completing a data analytics bootcamp to add technical skills in data science. I'm looking for a hybrid role at the intersection of environmental sustainability and technology, where analytical and regulatory expertise support data-driven environmental solutions across Latin America and the U.S.
+          </p>
         </div>
+ 
+        <dl class="facts">
+          <div>
+            <dt data-es="Experiencia">Experience</dt>
+            <dd data-es="Más de 5 años">5+ years</dd>
+          </div>
+          <div>
+            <dt data-es="Sector">Sector</dt>
+            <dd data-es="Energía, México">Energy, Mexico</dd>
+          </div>
+          <div>
+            <dt data-es="Especialidad">Specialty</dt>
+            <dd data-es="Tratamiento de agua y gestión regulatoria">Water treatment and regulatory project management</dd>
+          </div>
+          <div>
+            <dt data-es="Estudiando">Studying</dt>
+            <dd data-es="Bootcamp de análisis de datos">Data analytics bootcamp</dd>
+          </div>
+          <div>
+            <dt data-es="Busco">Looking for</dt>
+            <dd data-es="Puesto híbrido en sostenibilidad y tecnología">Hybrid role in sustainability and technology</dd>
+          </div>
+          <div>
+            <dt data-es="Región">Region</dt>
+            <dd data-es="América Latina y Estados Unidos">Latin America and the U.S.</dd>
+          </div>
+        </dl>
+      </div>
     </section>
-
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title reveal" data-i18n="projects.title">Proyectos Destacados</h2>
-
-            <!-- Proyecto Destacado: Causal Fillups -->
-            <div class="featured-project reveal">
-                <div class="card-image">
-                    <img src="images/causal_fillups.jpeg" alt="Causal Fillups Project">
-                </div>
-                <div class="card-content">
-                    <span class="featured-badge"><i class="fa-solid fa-star"></i> <span data-i18n="p4.featured">Proyecto Destacado</span></span>
-                    <div class="card-header">
-                        <i class="fa-solid fa-flask" title="RCT / Causal Inference"></i>
-                        <i class="fa-brands fa-python" title="Python"></i>
-                        <i class="fa-brands fa-aws" title="AWS"></i>
-                    </div>
-                    <h3 data-i18n="p4.title">Causal Fillups</h3>
-                    <span class="tag" data-i18n="p4.tag">Inferencia Causal & ML</span>
-                    <p data-i18n="p4.desc">Sistema que combina RCT, modelo Logit, inferencia causal (ATE/CATE) y Thompson Sampling para reducir robo de diesel en operaciones de flota. Ciclo virtuoso: experimentación → predicción → causalidad → optimización.</p>
-                    <a href="#" data-open-modal="causalModal" class="btn-card">
-                        <span data-i18n="p4.btn">Ver Arquitectura</span> <i class="fa-solid fa-sitemap"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Otros proyectos -->
-            <div class="projects-grid">
-
-                <!-- Proyecto 1: YSGA-PyRust -->
-                <div class="project-card reveal reveal-d1">
-                    <div class="card-image">
-                        <img src="images/ysga_swarm.png" alt="YSGA-PyRust Project">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <i class="fa-brands fa-rust" title="Rust"></i>
-                            <i class="fa-brands fa-python" title="Python"></i>
-                            <i class="fa-solid fa-microchip" title="CUDA/GPU"></i>
-                        </div>
-                        <h3 data-i18n="p1.title">YSGA-PyRust</h3>
-                        <span class="tag" data-i18n="p1.tag">R&D y Optimización</span>
-                        <p data-i18n="p1.desc">Librería híbrida de metaheurísticas para VRP. Aceleración 50x vs Python puro usando bindings de Rust y paralelismo CUDA.</p>
-                        <a href="https://github.com/Angie30819/ysga_pyrust" target="_blank" class="btn-card">
-                            <span data-i18n="p1.btn">Ver en GitHub</span> <i class="fa-brands fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Proyecto 2: API Fleet 2.0 -->
-                <div class="project-card reveal reveal-d2">
-                    <div class="card-image">
-                        <img src="images/fleet_api.png" alt="API Fleet 2.0 Project">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <i class="fa-brands fa-aws" title="AWS Lambda"></i>
-                            <i class="fa-solid fa-server" title="Terraform"></i>
-                            <i class="fa-solid fa-database" title="PostgreSQL"></i>
-                        </div>
-                        <h3 data-i18n="p2.title">API Fleet 2.0</h3>
-                        <span class="tag" data-i18n="p2.tag">Logística Analytics & AWS Serverless</span>
-                        <p data-i18n-html="p2.desc.html"><strong>Visión de Negocio:</strong> Transformación de telemetría vehicular en un producto de valor agregado con trazabilidad total, reduciendo la carga operativa del equipo de monitoreo.<br><br><strong>Implementación:</strong> Arquitectura orientada a eventos para procesar flujos de datos en tiempo real y proporcionar información crítica de las unidades.</p>
-                    </div>
-                </div>
-
-                <!-- Proyecto 3: Auditoría Inteligente -->
-                <div class="project-card reveal reveal-d3">
-                    <div class="card-image">
-                        <img src="images/audit_ai.png" alt="Auditoría Inteligente Project">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <i class="fa-solid fa-file-contract" title="NLP"></i>
-                            <i class="fa-brands fa-google" title="Google APIs"></i>
-                            <i class="fa-solid fa-robot" title="AWS Textract"></i>
-                        </div>
-                        <h3 data-i18n="p3.title">Auditoría Inteligente</h3>
-                        <span class="tag" data-i18n="p3.tag">Automation</span>
-                        <p data-i18n="p3.desc">Ecosistema de automatización documental. Extracción OCR/NLP para auditoría comercial y compliance normativo.</p>
-                        <a href="#" data-open-modal="auditModal" class="btn-card">
-                            <span data-i18n="p3.btn">Ver Arquitectura</span> <i class="fa-solid fa-sitemap"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
+ 
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <h2 data-es="Habilidades">Skills</h2>
+ 
+      <div class="section-body">
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3 data-es="Ambiental y regulatorio">Environmental and regulatory</h3>
+            <ul>
+              <li data-es="Tratamiento de agua">Water treatment</li>
+              <li data-es="Gestión de permisos ante autoridades regulatorias nacionales">Permit management with national regulatory authorities</li>
+              <li data-es="Gestión regulatoria de proyectos">Regulatory project management</li>
+              <li data-es="Cumplimiento ambiental en el sector energético">Environmental compliance in the energy sector</li>
+              <li data-es="Coordinación con autoridades y equipos técnicos">Coordination with agencies and technical teams</li>
+            </ul>
+          </div>
+ 
+          <div class="skill-group">
+            <h3 data-es="Datos y tecnología (en desarrollo)">Data and technology (in progress)</h3>
+            <ul>
+              <!-- TODO: ajusta esta lista a las herramientas que realmente ves en tu bootcamp -->
+              <li>Python</li>
+              <li>SQL</li>
+              <li data-es="Limpieza y análisis de datos">Data cleaning and analysis</li>
+              <li data-es="Visualización de datos">Data visualization</li>
+              <li data-es="Hojas de cálculo (Excel)">Spreadsheets (Excel)</li>
+            </ul>
+          </div>
         </div>
+ 
+        <p class="skills-note" data-es="Idiomas: español e inglés.">Languages: Spanish and English.</p>
+      </div>
     </section>
-
-    <section class="dashboards">
-        <div class="container">
-            <h2 class="section-title reveal" data-i18n="dash.title">Dashboards & Analytics</h2>
-            <p class="section-subtitle reveal" data-i18n="dash.subtitle">Visualización de KPIs operativos en tiempo real. Stack: SQL, Polars, Looker/Streamlit.</p>
-
-            <div class="laptop-mockup reveal">
-                <div class="screen">
-                    <a href="dashboards.html">
-                        <img src="images/dashboard_preview.png" alt="Dashboard Analytics" onerror="this.src='https://placehold.co/800x500/1e293b/FFF?text=Dashboard+Preview'">
-                    </a>
-                </div>
-                <div class="keyboard"></div>
-            </div>
-        </div>
+ 
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <h2 data-es="Proyectos">Projects</h2>
+ 
+      <div class="section-body">
+        <p class="section-intro" data-es="Trabajo del bootcamp que aplica el análisis de datos a preguntas ambientales y regulatorias.">
+          Bootcamp work that applies data analysis to environmental and regulatory questions.
+        </p>
+ 
+        <!--
+          TODO: reemplaza cada proyecto de ejemplo por tus proyectos reales.
+          Cambia título, descripción, herramientas, estado y el enlace al repositorio.
+          Para agregar un proyecto, copia un bloque <article class="project"> completo.
+        -->
+ 
+        <article class="project">
+          <div class="project-meta">
+            <span class="status" data-es="En progreso">In progress</span>
+            <p class="tools">Python, pandas, Matplotlib</p>
+          </div>
+          <div class="project-body">
+            <h3 data-es="Análisis de calidad del agua">Water quality analysis</h3>
+            <p data-es="Limpieza y exploración de un conjunto de datos públicos de calidad del agua para identificar los parámetros que superan los límites regulatorios.">
+              Cleaning and exploring a public water quality dataset to identify which parameters exceed regulatory limits.
+            </p>
+            <a class="link" href="https://github.com/YOUR-USERNAME/water-quality-analysis" data-es="Ver repositorio">View repository</a>
+          </div>
+        </article>
+ 
+        <article class="project">
+          <div class="project-meta">
+            <span class="status" data-es="En progreso">In progress</span>
+            <p class="tools">SQL, Excel, Tableau</p>
+          </div>
+          <div class="project-body">
+            <h3 data-es="Tablero de seguimiento de permisos">Permit tracking dashboard</h3>
+            <p data-es="Tablero interactivo que sigue las etapas, los plazos y las acciones pendientes de los permisos de una cartera de proyectos.">
+              An interactive dashboard that follows permit stages, deadlines and pending actions across a portfolio of projects.
+            </p>
+            <a class="link" href="https://github.com/YOUR-USERNAME/permit-tracking-dashboard" data-es="Ver repositorio">View repository</a>
+          </div>
+        </article>
+ 
+        <article class="project">
+          <div class="project-meta">
+            <span class="status" data-es="Planeado">Planned</span>
+            <p class="tools">SQL, Python</p>
+          </div>
+          <div class="project-body">
+            <h3 data-es="Uso de agua en el sector energético">Water use in the energy sector</h3>
+            <p data-es="Análisis de datos públicos sobre el uso de agua en el sector energético de México y Estados Unidos.">
+              Analysis of public data on water use in the energy sector in Mexico and the U.S.
+            </p>
+            <a class="link" href="https://github.com/YOUR-USERNAME/energy-water-use" data-es="Ver repositorio">View repository</a>
+          </div>
+        </article>
+      </div>
     </section>
-
-    <section id="contact" class="connect">
-        <div class="container">
-            <h2 class="section-title reveal" data-i18n="contact.title">Conectemos</h2>
-            <p class="section-subtitle reveal" data-i18n="contact.subtitle">¿Interesado en colaborar o discutir sobre datos y arquitectura? Encuéntrame en mis redes.</p>
-            <div class="social-grid">
-                <a href="https://www.linkedin.com/in/angelica-caballero-417a07405/" target="_blank" class="social-card linkedin reveal reveal-d1">
-                    <i class="fa-brands fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                    <p data-i18n="contact.li">Conecta profesionalmente</p>
-                </a>
-                <a href="https://github.com/Angie30819" target="_blank" class="social-card github reveal reveal-d2">
-                    <i class="fa-brands fa-github"></i>
-                    <span>GitHub</span>
-                    <p data-i18n="contact.gh">Explora mi código</p>
-                </a>
-                <a href="mailto:angie308.caballero@gmail.com" class="social-card gmail reveal reveal-d3">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>Gmail</span>
-                    <p data-i18n="contact.mail">Contáctame directamente</p>
-                </a>
-            </div>
-        </div>
+ 
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2 data-es="Contacto">Contact</h2>
+ 
+      <div class="section-body">
+        <p class="section-intro" data-es="Estoy abierta a puestos híbridos en sostenibilidad ambiental y tecnología en América Latina y Estados Unidos.">
+          I'm open to hybrid roles in environmental sustainability and technology across Latin America and the U.S.
+        </p>
+ 
+        <ul class="contact-list">
+          <!-- TODO: reemplaza con tus datos reales -->
+          <li><a href="mailto:you@example.com">you@example.com</a></li>
+          <li><a href="https://www.linkedin.com/in/YOUR-PROFILE" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/YOUR-USERNAME" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
     </section>
-
-    <footer>
-        <div class="container">
-            <img src="images/logo.png" alt="AC Logo" class="footer-logo">
-            <p data-i18n="footer.copy">© 2026 Angelica Caballero. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- Modal: Auditoría Inteligente -->
-    <div id="auditModal" class="modal" data-modal-key="modal.audit.title">
-        <div class="modal-content">
-            <span class="close-modal" data-modal="auditModal">&times;</span>
-            <div class="modal-logo">
-                <img src="images/logo.png" alt="AC Logo">
-            </div>
-            <h2 data-i18n="modal.audit.title">Arquitectura: Auditoría Inteligente</h2>
-            <div class="mermaid"></div>
-        </div>
-    </div>
-
-    <!-- Modal: Arquitectura General (Data Pipeline) -->
-    <div id="archModal" class="modal" data-modal-key="modal.arch.title">
-        <div class="modal-content">
-            <span class="close-modal" data-modal="archModal">&times;</span>
-            <div class="modal-logo">
-                <img src="images/logo.png" alt="AC Logo">
-            </div>
-            <h2 data-i18n="modal.arch.title">Pipeline de Datos — Diseño General</h2>
-            <div class="mermaid"></div>
-        </div>
-    </div>
-
-    <!-- Modal: Causal Fillups -->
-    <div id="causalModal" class="modal" data-modal-key="modal.causal.title">
-        <div class="modal-content">
-            <span class="close-modal" data-modal="causalModal">&times;</span>
-            <div class="modal-logo">
-                <img src="images/logo.png" alt="AC Logo">
-            </div>
-            <h2 data-i18n="modal.causal.title">Arquitectura: Causal Fillups</h2>
-            <div class="modal-tabs">
-                <button class="modal-tab active" data-tab="diagram" data-i18n="modal.causal.tab.diagram">Diagrama</button>
-                <button class="modal-tab" data-tab="image" data-i18n="modal.causal.tab.image">Imagen Detallada</button>
-            </div>
-            <div class="modal-tab-content" data-content="diagram">
-                <div class="mermaid"></div>
-            </div>
-            <div class="modal-tab-content" data-content="image" style="display:none;">
-                <img src="images/causal_fillups.jpeg" alt="Causal Fillups Architecture" class="modal-detail-img">
-            </div>
-        </div>
-    </div>
-
-    <!-- Floating CTA -->
-    <div id="floatingCta" class="floating-cta">
-        <a href="#contact" class="floating-cta-btn">
-            <i class="fa-solid fa-envelope"></i>
-            <span class="cta-label" data-i18n="fcta.label">Contáctame</span>
-        </a>
-    </div>
-
-    <!-- Toast notification -->
-    <div id="toast" class="toast" data-i18n="toast.email">Email copiado al portapapeles</div>
-
-    <script type="module" src="app.js?v=20260412"></script>
+ 
+  </main>
+ 
+  <footer class="site-footer">
+    <!-- TODO: tu nombre -->
+    <p>&copy; <span id="year">2026</span> <span data-es="Tu nombre">Your Name</span></p>
+  </footer>
+ 
+  <script src="script.js"></script>
 </body>
 </html>
