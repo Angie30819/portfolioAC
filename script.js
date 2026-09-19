@@ -1,176 +1,325 @@
-// ===== Language data =====
-const translations = {
-  es: {
-    pageTitle: "Angelica Navarrete — Analista de Datos Ambiental",
-    metaDesc: "Portafolio de Angelica Navarrete: bioquímica ambiental especializada en tratamiento de agua, en transición hacia data science.",
-    navProfile: "Perfil",
-    navExperience: "Trayectoria",
-    navSkills: "Habilidades",
-    navProjects: "Proyectos",
-    navContact: "Contacto",
-    heroEyebrow: "Recursos hídricos · Cumplimiento ambiental · Análisis de datos",
-    heroLede: "Bioquímica ambiental con cinco años dirigiendo proyectos de tratamiento de agua y trámites regulatorios en el sector energético, ahora sumando análisis de datos para tomar mejores decisiones sobre los recursos que sostienen todo lo demás.",
-    btnProjects: "Ver proyectos",
-    btnContact: "Escríbeme",
-    statYears: "años en tratamiento de agua y gestión regulatoria",
-    statCert: "certificación en análisis de datos",
-    aboutTitle: "Perfil",
-    aboutP1: "Pasé cinco años en el sector energético mexicano gestionando permisos ante entidades regulatoria y elaborando informes técnicos para proyectos de extracción de gas natural, además de trabajar directamente en tratamiento de agua. Ese trabajo me enseñó que las decisiones ambientales serias dependen de datos bien manejados, no solo de buenas intenciones.",
-    aboutP2: "Hoy estoy completando un bootcamp de análisis de datos para llevar esa misma disciplina técnica a herramientas más modernas: Python, SQL y visualización de datos aplicados a problemas de agua, cumplimiento normativo y sostenibilidad.",
-    aboutP3: "Busco roles híbridos donde la ciencia ambiental y los datos se encuentren, en Latinoamérica o Estados Unidos.",
-    experienceTitle: "Trayectoria",
-    t1date: "2026", t1title: "Bootcamp de Análisis de Datos",
-    t1desc: "Formación intensiva en Python, SQL, visualización de datos y fundamentos de machine learning, con proyectos aplicados a problemas ambientales.",
-    t2date: "2018–2023", t2title: "Gestión de Proyectos y Permisos Regulatorios",
-    t2desc: "Secretaría de Energía, sector de extracción de gas natural, México. Elaboración de informes de gestión de proyectos y trámite de permisos ante la entidad regulatoria correspondiente.",
-    t3date: "2018–2023", t3title: "Tratamiento de Agua",
-    t3desc: "Cinco años de experiencia técnica en procesos de tratamiento de agua dentro del sector energético en México.",
-    t4date: "Universidad", t4title: "Bioquímica Ambiental",
-    t4desc: "Formación de base en bioquímica ambiental, el fundamento técnico detrás de todo el trabajo posterior en agua y cumplimiento normativo.",
-    timelineNote: "* Reemplaza los nombres de instituciones y fechas exactas con tu información completa.",
-    skillsTitle: "Habilidades",
-    skillsColEnv: "Ambiental & regulatorio",
-    skillEnv1: "Tratamiento y calidad de agua",
-    skillEnv2: "Bioquímica ambiental",
-    skillEnv3: "Gestión de permisos regulatorios",
-    skillEnv4: "Informes técnicos de proyecto",
-    skillEnv5: "Cumplimiento normativo, sector energético",
-    skillsColData: "Datos & análisis",
-    skillData1: "Python (pandas, análisis exploratorio)",
-    skillData2: "SQL",
-    skillData3: "Visualización de datos",
-    skillData4: "Estadística aplicada",
-    skillData5: "Fundamentos de machine learning",
-    projectsTitle: "Proyectos",
-    projectsNote: "Los proyectos abajo son marcadores de posición — reemplázalos con tus entregables reales del bootcamp cuando los tengas listos.",
-    tagPlaceholder: "Marcador de posición",
-    p1title: "Panel de calidad de agua",
-    p1desc: "Dashboard exploratorio sobre indicadores de calidad de agua en una cuenca hidrográfica, identificando tendencias y valores fuera de norma a lo largo del tiempo.",
-    tagViz: "Visualización",
-    p2title: "Predicción de cumplimiento normativo",
-    p2desc: "Modelo exploratorio para anticipar riesgo de incumplimiento en plantas de tratamiento a partir de datos históricos de inspección.",
-    p3title: "Análisis de consumo de agua industrial",
-    p3desc: "Estudio de patrones de consumo de agua en procesos industriales, con recomendaciones basadas en datos para reducir desperdicio.",
-    tagStats: "Estadística",
-    viewRepo: "Ver repositorio →",
-    contactTitle: "Hablemos.",
-    contactLede: "Abierta a roles híbridos entre medio ambiente y tecnología, en Latinoamérica o Estados Unidos.",
-    contactLinkedin: "LinkedIn — reemplaza con tu URL",
-    contactGithub: "GitHub — reemplaza con tu usuario",
-    footerNote: "Angelica Navarrete · Hecho a mano, sin plantillas."
-  },
-  en: {
-    pageTitle: "Angelica Navarrete — Environmental Data Analyst",
-    metaDesc: "Portfolio of Angelica Navarrete — environmental biochemist specializing in water treatment, transitioning into data science.",
-    navProfile: "Profile",
-    navExperience: "Experience",
-    navSkills: "Skills",
-    navProjects: "Projects",
-    navContact: "Contact",
-    heroEyebrow: "Water resources · Environmental compliance · Data analysis",
-    heroLede: "Environmental biochemist with five years leading water treatment projects and regulatory permitting in the energy sector, now adding data analysis to make better decisions about the resources everything else depends on.",
-    btnProjects: "View projects",
-    btnContact: "Get in touch",
-    statYears: "years in water treatment and regulatory management",
-    statCert: "data analytics certification",
-    aboutTitle: "Profile",
-    aboutP1: "I spent five years in Mexico's energy sector managing permits with regulatory authorities and writing technical reports for natural gas extraction projects, alongside hands-on work in water treatment. That work taught me that serious environmental decisions depend on well-handled data, not just good intentions.",
-    aboutP2: "I'm now completing a data analytics bootcamp to bring that same technical discipline to more modern tools — Python, SQL, and data visualization — applied to problems in water, regulatory compliance, and sustainability.",
-    aboutP3: "I'm looking for hybrid roles where environmental science and data meet, across Latin America and the U.S.",
-    experienceTitle: "Experience",
-    t1date: "2026", t1title: "Data Analytics Bootcamp",
-    t1desc: "Intensive training in Python, SQL, data visualization, and machine learning fundamentals, with projects applied to environmental problems.",
-    t2date: "2018–2023", t2title: "Project Management & Regulatory Permitting",
-    t2desc: "Secretaría de Energía, natural gas extraction sector, Mexico. Prepared project management reports and managed permitting processes with the relevant regulatory authority.",
-    t3date: "2018–2023", t3title: "Water Treatment",
-    t3desc: "Five years of hands-on technical experience in water treatment processes within Mexico's energy sector.",
-    t4date: "University", t4title: "Environmental Biochemistry",
-    t4desc: "Foundational training in environmental biochemistry — the technical basis for all the water and compliance work that followed.",
-    timelineNote: "* Swap in your actual institution names and exact dates.",
-    skillsTitle: "Skills",
-    skillsColEnv: "Environmental & regulatory",
-    skillEnv1: "Water treatment & quality",
-    skillEnv2: "Environmental biochemistry",
-    skillEnv3: "Regulatory permitting",
-    skillEnv4: "Technical project reporting",
-    skillEnv5: "Regulatory compliance, energy sector",
-    skillsColData: "Data & analytics",
-    skillData1: "Python (pandas, exploratory analysis)",
-    skillData2: "SQL",
-    skillData3: "Data visualization",
-    skillData4: "Applied statistics",
-    skillData5: "Machine learning fundamentals",
-    projectsTitle: "Projects",
-    projectsNote: "The projects below are placeholders — swap them out for your real bootcamp deliverables once they're ready.",
-    tagPlaceholder: "Placeholder",
-    p1title: "Water Quality Dashboard",
-    p1desc: "Exploratory dashboard tracking water quality indicators across a river basin, surfacing trends and out-of-range readings over time.",
-    tagViz: "Visualization",
-    p2title: "Regulatory Compliance Prediction",
-    p2desc: "Exploratory model to flag compliance risk at treatment plants based on historical inspection data.",
-    p3title: "Industrial Water Consumption Analysis",
-    p3desc: "Study of water consumption patterns in industrial processes, with data-backed recommendations to reduce waste.",
-    tagStats: "Statistics",
-    viewRepo: "View repository →",
-    contactTitle: "Let's talk.",
-    contactLede: "Open to hybrid roles between environment and technology, across Latin America and the U.S.",
-    contactLinkedin: "LinkedIn — add your URL",
-    contactGithub: "GitHub — add your username",
-    footerNote: "Angelica Navarrete · Handcrafted, no templates."
-  }
-};
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
 
-// 👇 CAMBIO 1: idioma inicial ahora es inglés
-let currentLang = "en";
+/* ============ Config ============ */
+const EMAIL = "angie308.caballero@gmail.com";
+
+mermaid.initialize({
+    startOnLoad: false,
+    theme: "base",
+    themeVariables: {
+        primaryColor: "#124f48",
+        primaryTextColor: "#eafaf7",
+        primaryBorderColor: "#4fb3a9",
+        lineColor: "#4fb3a9",
+        secondaryColor: "#0d3b36",
+        tertiaryColor: "#1b6b61",
+        fontFamily: "Inter, sans-serif"
+    }
+});
+
+/* ============ i18n ============ */
+const translations = {
+    es: {
+        "nav.projects": "Proyectos",
+        "nav.architecture": "Arquitectura",
+        "nav.contact": "Contacto",
+        "hero.badge": "Abierto a oportunidades",
+        "hero.subtitle": "Científica de Datos | Arquitectura Cloud & Optimización",
+        "hero.text": "Transformando datos complejos en soluciones escalables y valor de negocio tangible.",
+        "hero.cta.projects": "Ver Proyectos",
+        "hero.cta.cv": "Descargar CV",
+        "hero.cv.hint": "PDF — Actualizado 2025",
+        "arch.title": "Diseño de Sistemas Complejos",
+        "arch.subtitle": "Arquitecturas de datos y microservicios. Haz clic para ver el diagrama.",
+        "arch.btn": "Ver Diagrama de Sistema",
+        "projects.title": "Proyectos Destacados",
+        "p4.featured": "Proyecto Destacado",
+        "p4.title": "Causal Fillups",
+        "p4.tag": "Inferencia Causal & ML",
+        "p4.desc": "Sistema que combina RCT, modelo Logit, inferencia causal (ATE/CATE) y Thompson Sampling para reducir robo de diesel en operaciones de flota. Ciclo virtuoso: experimentación → predicción → causalidad → optimización.",
+        "p4.btn": "Ver Arquitectura",
+        "p1.title": "YSGA-PyRust",
+        "p1.tag": "R&D y Optimización",
+        "p1.desc": "Librería híbrida de metaheurísticas para VRP. Aceleración 50x vs Python puro usando bindings de Rust y paralelismo CUDA.",
+        "p1.btn": "Ver en GitHub",
+        "p2.title": "API Fleet 2.0",
+        "p2.tag": "Logística Analytics & AWS Serverless",
+        "p2.desc.html": "<strong>Visión de Negocio:</strong> Transformación de telemetría vehicular en un producto de valor agregado con trazabilidad total, reduciendo la carga operativa del equipo de monitoreo.<br><br><strong>Implementación:</strong> Arquitectura orientada a eventos para procesar flujos de datos en tiempo real y proporcionar información crítica de las unidades.",
+        "p3.title": "Auditoría Inteligente",
+        "p3.tag": "Automation",
+        "p3.desc": "Ecosistema de automatización documental. Extracción OCR/NLP para auditoría comercial y compliance normativo.",
+        "p3.btn": "Ver Arquitectura",
+        "dash.title": "Dashboards & Analytics",
+        "dash.subtitle": "Visualización de KPIs operativos en tiempo real. Stack: SQL, Polars, Looker/Streamlit.",
+        "contact.title": "Conectemos",
+        "contact.subtitle": "¿Interesado en colaborar o discutir sobre datos y arquitectura? Encuéntrame en mis redes.",
+        "contact.li": "Conecta profesionalmente",
+        "contact.gh": "Explora mi código",
+        "contact.mail": "Contáctame directamente",
+        "footer.copy": "© 2026 Angelica Caballero. Todos los derechos reservados.",
+        "modal.audit.title": "Arquitectura: Auditoría Inteligente",
+        "modal.arch.title": "Pipeline de Datos — Diseño General",
+        "modal.causal.title": "Arquitectura: Causal Fillups",
+        "modal.causal.tab.diagram": "Diagrama",
+        "modal.causal.tab.image": "Imagen Detallada",
+        "fcta.label": "Contáctame",
+        "toast.email": "Email copiado al portapapeles"
+    },
+    en: {
+        "nav.projects": "Projects",
+        "nav.architecture": "Architecture",
+        "nav.contact": "Contact",
+        "hero.badge": "Open to opportunities",
+        "hero.subtitle": "Data Scientist | Cloud Architecture & Optimization",
+        "hero.text": "Turning complex data into scalable solutions and tangible business value.",
+        "hero.cta.projects": "View Projects",
+        "hero.cta.cv": "Download CV",
+        "hero.cv.hint": "PDF — Updated 2025",
+        "arch.title": "Designing Complex Systems",
+        "arch.subtitle": "Data and microservice architectures. Click to see the diagram.",
+        "arch.btn": "View System Diagram",
+        "projects.title": "Featured Projects",
+        "p4.featured": "Featured Project",
+        "p4.title": "Causal Fillups",
+        "p4.tag": "Causal Inference & ML",
+        "p4.desc": "System combining RCT, a Logit model, causal inference (ATE/CATE) and Thompson Sampling to reduce diesel theft in fleet operations. Virtuous cycle: experimentation → prediction → causality → optimization.",
+        "p4.btn": "View Architecture",
+        "p1.title": "YSGA-PyRust",
+        "p1.tag": "R&D and Optimization",
+        "p1.desc": "Hybrid metaheuristics library for VRP. 50x speed-up over pure Python using Rust bindings and CUDA parallelism.",
+        "p1.btn": "View on GitHub",
+        "p2.title": "API Fleet 2.0",
+        "p2.tag": "Logistics Analytics & AWS Serverless",
+        "p2.desc.html": "<strong>Business Vision:</strong> Turning vehicle telemetry into a value-added product with full traceability, reducing the monitoring team's operational load.<br><br><strong>Implementation:</strong> Event-driven architecture to process real-time data streams and surface critical fleet information.",
+        "p3.title": "Smart Audit",
+        "p3.tag": "Automation",
+        "p3.desc": "Document automation ecosystem. OCR/NLP extraction for commercial auditing and regulatory compliance.",
+        "p3.btn": "View Architecture",
+        "dash.title": "Dashboards & Analytics",
+        "dash.subtitle": "Real-time operational KPI visualization. Stack: SQL, Polars, Looker/Streamlit.",
+        "contact.title": "Let's Connect",
+        "contact.subtitle": "Interested in collaborating or talking about data and architecture? Find me on my socials.",
+        "contact.li": "Connect professionally",
+        "contact.gh": "Explore my code",
+        "contact.mail": "Reach me directly",
+        "footer.copy": "© 2026 Angelica Caballero. All rights reserved.",
+        "modal.audit.title": "Architecture: Smart Audit",
+        "modal.arch.title": "Data Pipeline — General Design",
+        "modal.causal.title": "Architecture: Causal Fillups",
+        "modal.causal.tab.diagram": "Diagram",
+        "modal.causal.tab.image": "Detailed Image",
+        "fcta.label": "Contact me",
+        "toast.email": "Email copied to clipboard"
+    }
+};
 
 function applyLanguage(lang) {
-  currentLang = lang;
-  document.documentElement.lang = lang;
-
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    const text = translations[lang][key];
-    if (text !== undefined) {
-      el.textContent = text;
-    }
-  });
-
-  document.title = translations[lang].pageTitle;
-
-  const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc) metaDesc.setAttribute("content", translations[lang].metaDesc);
-
-  document.querySelectorAll(".lang-option").forEach((opt) => {
-    opt.classList.toggle("is-active", opt.getAttribute("data-lang") === lang);
-  });
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang][key]) el.textContent = translations[lang][key];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+        const key = el.getAttribute("data-i18n-html");
+        if (translations[lang][key]) el.innerHTML = translations[lang][key];
+    });
+    document.documentElement.lang = lang;
+    localStorage.setItem("lang", lang);
+    const langBtn = document.querySelector(".lang-toggle");
+    if (langBtn) langBtn.textContent = lang === "es" ? "EN" : "ES";
 }
 
-const langToggle = document.getElementById("langToggle");
-if (langToggle) {
-  langToggle.addEventListener("click", () => {
-    applyLanguage(currentLang === "es" ? "en" : "es");
-  });
+function initLanguage() {
+    const saved = localStorage.getItem("lang") || "es";
+    applyLanguage(saved);
+    document.querySelector(".lang-toggle")?.addEventListener("click", () => {
+        const current = localStorage.getItem("lang") || "es";
+        applyLanguage(current === "es" ? "en" : "es");
+    });
 }
 
-// 👇 CAMBIO 2: aplica el inglés apenas carga la página
-applyLanguage("en");
+/* ============ Theme ============ */
+function initTheme() {
+    const btn = document.querySelector(".theme-toggle");
+    const icon = btn?.querySelector("i");
+    const setIcon = () => {
+        const isLight = document.documentElement.getAttribute("data-theme") === "light";
+        if (icon) icon.className = isLight ? "fa-solid fa-sun" : "fa-solid fa-moon";
+    };
+    setIcon();
+    btn?.addEventListener("click", () => {
+        const isLight = document.documentElement.getAttribute("data-theme") === "light";
+        if (isLight) {
+            document.documentElement.removeAttribute("data-theme");
+            localStorage.setItem("theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("theme", "light");
+        }
+        setIcon();
+    });
+}
 
-// Resalta el enlace de navegación de la sección visible actualmente
-const sections = document.querySelectorAll('main section[id]');
-const navLinks = document.querySelectorAll('.topbar nav a');
+/* ============ Mobile menu ============ */
+function initHamburger() {
+    const hamburger = document.getElementById("hamburger");
+    const navbar = document.querySelector(".navbar");
+    hamburger?.addEventListener("click", () => {
+        navbar.classList.toggle("nav-open");
+    });
+    navbar?.querySelectorAll(".nav-links-text a").forEach((link) => {
+        link.addEventListener("click", () => navbar.classList.remove("nav-open"));
+    });
+}
 
-const setActive = () => {
-  let current = '';
-  sections.forEach((section) => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top <= 120 && rect.bottom >= 120) {
-      current = section.id;
-    }
-  });
-  navLinks.forEach((link) => {
-    link.style.color = link.getAttribute('href') === `#${current}` ? 'var(--deep)' : '';
-  });
+/* ============ Reveal on scroll ============ */
+function initReveal() {
+    const items = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.15 }
+    );
+    items.forEach((el) => observer.observe(el));
+}
+
+/* ============ Mermaid diagrams ============ */
+const diagrams = {
+    archModal: `flowchart LR
+        A[Fuentes de Datos] --> B[Ingesta]
+        B --> C[(Data Lake)]
+        C --> D[Procesamiento]
+        D --> E[(Data Warehouse)]
+        E --> F[Serving Layer]
+        F --> G[Dashboards / BI]`,
+    auditModal: `flowchart LR
+        A[Documento] --> B[OCR / Textract]
+        B --> C[Extracción NLP]
+        C --> D[Validación de Reglas]
+        D --> E{Cumple Normativa?}
+        E -- Sí --> F[Reporte de Auditoría]
+        E -- No --> G[Alerta de Compliance]`,
+    causalModal: `flowchart LR
+        A[Experimento RCT] --> B[Modelo Logit]
+        B --> C[Inferencia Causal ATE/CATE]
+        C --> D[Thompson Sampling]
+        D --> E[Acción en Flota]
+        E -.-> A`
 };
 
-window.addEventListener('scroll', setActive, { passive: true });
-setActive();
+const renderedModals = new Set();
+
+async function renderDiagram(modalId) {
+    if (renderedModals.has(modalId)) return;
+    const modal = document.getElementById(modalId);
+    const container = modal?.querySelector(".mermaid");
+    if (!container || !diagrams[modalId]) return;
+    try {
+        const { svg } = await mermaid.render(`${modalId}-svg`, diagrams[modalId]);
+        container.innerHTML = svg;
+        renderedModals.add(modalId);
+    } catch (err) {
+        container.textContent = "No se pudo cargar el diagrama.";
+        console.error("Mermaid render error:", err);
+    }
+}
+
+/* ============ Modals ============ */
+function openModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden";
+    renderDiagram(id);
+}
+
+function closeModal(modal) {
+    modal.classList.remove("open");
+    document.body.style.overflow = "";
+}
+
+function initModals() {
+    document.querySelectorAll("[data-open-modal]").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            openModal(btn.getAttribute("data-open-modal"));
+        });
+    });
+    document.querySelectorAll(".close-modal").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            closeModal(document.getElementById(btn.getAttribute("data-modal")));
+        });
+    });
+    document.querySelectorAll(".modal").forEach((modal) => {
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) closeModal(modal);
+        });
+    });
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            document.querySelectorAll(".modal.open").forEach(closeModal);
+        }
+    });
+
+    /* Tabs dentro del modal Causal Fillups */
+    document.querySelectorAll(".modal-tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+            const modalContent = tab.closest(".modal-content");
+            modalContent.querySelectorAll(".modal-tab").forEach((t) => t.classList.remove("active"));
+            tab.classList.add("active");
+            const target = tab.getAttribute("data-tab");
+            modalContent.querySelectorAll(".modal-tab-content").forEach((panel) => {
+                panel.style.display = panel.getAttribute("data-content") === target ? "block" : "none";
+            });
+        });
+    });
+}
+
+/* ============ Floating CTA ============ */
+function initFloatingCta() {
+    const cta = document.getElementById("floatingCta");
+    const hero = document.querySelector(".hero");
+    if (!cta || !hero) return;
+    const threshold = hero.offsetHeight * 0.7;
+    window.addEventListener("scroll", () => {
+        cta.classList.toggle("visible", window.scrollY > threshold);
+    });
+}
+
+/* ============ Toast + copy email ============ */
+function showToast() {
+    const toast = document.getElementById("toast");
+    if (!toast) return;
+    toast.classList.add("show");
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(() => toast.classList.remove("show"), 2600);
+}
+
+function initEmailCopy() {
+    document.querySelectorAll(`a[href^="mailto:"]`).forEach((link) => {
+        link.addEventListener("click", async () => {
+            try {
+                await navigator.clipboard.writeText(EMAIL);
+                showToast();
+            } catch (err) {
+                console.error("No se pudo copiar el email:", err);
+            }
+        });
+    });
+}
+
+/* ============ Init ============ */
+document.addEventListener("DOMContentLoaded", () => {
+    initLanguage();
+    initTheme();
+    initHamburger();
+    initReveal();
+    initModals();
+    initFloatingCta();
+    initEmailCopy();
+});
